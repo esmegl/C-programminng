@@ -7,7 +7,7 @@
 // Ctrl + D = EOF.
 int main(){
 
-	int char_count, blanks, tabs, nwl, n;
+	int char_count, blanks, tabs, nwl;
 
 	blanks = 0;
 	tabs = 0;
