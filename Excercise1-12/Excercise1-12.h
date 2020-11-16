@@ -1,5 +1,5 @@
-#ifndef _Excercise_1_12_
-#define _Excercise_1_12_
+#ifndef _Exercise_1_12_
+#define _Exercise_1_12_
 
 #define IN   1  /* inside a word */
 #define OUT  0  /* outside a word */
