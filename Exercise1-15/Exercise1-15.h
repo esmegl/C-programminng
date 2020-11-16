@@ -25,7 +25,7 @@ void fahrtocel() {
 		printf("Invalid value, keep in mind -459F is the lowest value phisically possible.\n");
 	else {
 		if (fahr > _UPPER_LIMIT)
-			printf("Your number is too high, please try again.\n");
+			printf("Your number is too high. The maximum number allowed is 300F, please try again.\n");
 		else {
 
 			float celsius = (5.0/9.0) * (fahr-32.0); 
