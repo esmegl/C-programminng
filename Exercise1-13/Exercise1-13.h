@@ -1,5 +1,5 @@
-#ifndef _Excerxise_1_13_
-#define _Excerxise_1_13_
+#ifndef _EXERCISE_1_13
+#define _EXERCISE_1_13
 
 #include <stdio.h>
 
