@@ -1,5 +1,5 @@
-#ifndef _EXCERCISE_1_14_
-#define _EXCERCISE_1_14_
+#ifndef _EXERCISE_1_14_
+#define _EXERCISE_1_14_
 
 #define TOTAL_CHARS 128 // Total number of printable characters in ascii tabel.
 
