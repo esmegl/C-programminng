@@ -2,7 +2,7 @@
 #define _EXERCISE_1_19_
 
 #include <stdio.h>
-#define MAXLINE 40   /* Maximum input line length */
+#define MAXLINE 10   /* Maximum input line length */
 
 // Write a function reverse(s) that reverses the character string s. 
 //Use it to write a program that reverses itsinput a line at a time.
@@ -18,14 +18,17 @@ int main() {
 
 	while ((c = getchar()) != EOF ) {
 		
+		// Checks if the line hasn't finished.
 		while (c != '\n'){
 			line[i] = c;
 			++i;
 		}
+		// If the line finished start again, i = 0.
 		if (c == '\n'){
 			line[i] = '\0';
 			i = 0;
 		}
+		// Print the results.
 		reverse(line);
 	}
 
