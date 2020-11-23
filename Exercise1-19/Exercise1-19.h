@@ -2,61 +2,60 @@
 #define _EXERCISE_1_19_
 
 #include <stdio.h>
-#define MAXLINE 10   /* Maximum input line length */
+#define MAXLINE 10  /* Maximum input line length */
 
 // Write a function reverse(s) that reverses the character string s. 
-//Use it to write a program that reverses itsinput a line at a time.
-void reverse(char line[]);
+//Use it to write a program that reverses its input a line at a time.
+char reverse(char line[], char rev[]);
 
 int main() {
 
-	char line[MAXLINE];
-	int c, i, r;
+	char line[MAXLINE + 1];
+	char c;
+	char rev[MAXLINE + 1]; /* rev[] will store the array line[] in an inverse order. */
 
-	// Initialize the list.
-	for (i = 0; i <= MAXLINE; ++i)
-		line[i] = 0;
+	for (int i = 0; (i <= MAXLINE); ++i) /* Innitialize rev[] */
+		rev[i] = '\0';
 
-	i = 0;
-
-	//Debuggin' in progress
-	// Until here the code executes correctly
 	printf("Input your array: \n");
 
-	while ((c = getchar()) != EOF ) {
+	for (int i = 0; (i <= MAXLINE); ++i) /* Initializes line[] */
+		line[i] = '\0';
+	
+	while ((c = getchar()) != EOF) { /* Main loop */
+		int j = 0;
 		
-		// Checks if the line hasn't finished.
-		while ((c != '\n') && (i < MAXLINE)){
-			printf("%d\n", i);
-			line[i] = c;
-			++i;
+		while ((c != '\n') && (j < MAXLINE)){ /* Checks if the line hasn't finished and the string doesn't have more than 10 characters. */
+			line[j] = c;
+			++j;
+			c = getchar();
+			printf("%d\n", j);
 		}
 
-		// If the line finished start again, i = 0.
-		if (c == '\n'){
-			i = 0;
-		}
+		printf("Line is: \n");
+		printf("%s\n", line); /* Print line[] */
+		reverse(line, rev); 
+		
+
 	}
 
-	// Print the results.
-	reverse(line);
 
-}
+} /* End of main(). */
 
-void reverse(char line[]) {
-	int r, i;
-	char rev[MAXLINE];
+//Debuggin' in progress
+char reverse(char line[], char rev[]) {
 
-	i = MAXLINE;
-
-	for (r = 0; r <= MAXLINE ; ++r) {
-		if ( i >= 0){
-			rev[r] = line[i];
-			--i;
-		}
+	printf("Inside reverse()\n");
+	int j = (MAXLINE - 1);
+	for (int r = 0; ((r < MAXLINE) && (j >= 0)); ++r) {
+		rev[r] = line[j];
+		printf("%d\t%d\n", r, j);
+		--j;
 
 	}
-	printf("%d\n ", rev[r]);
+	printf("Reverse is: \n");
+	printf("%s\n", rev); /* Print rev[] */
+	return 0;
 }
 
 
