@@ -33,7 +33,7 @@ int main() {
 			line[j] = c;
 			++j;
 			c = getchar();
-			printf("%d\n", j);
+			//printf("%d\n", j); /* Auxiliar print */
 		}
 
 		printf("Line is: \n");
@@ -50,20 +50,6 @@ int main() {
 
 } /* End of main(). */
 
-char reverse(char line[]) {
-
-	extern char rev[];
-
-	printf("Inside reverse()\n");
-	int j = (MAXLINE - 1);
-	for (int r = 0; ((r < MAXLINE) && (j >= 0)); ++r) {
-		rev[r] = line[j];
-		printf("%d\t%d\n", r, j);
-		--j;
-
-	}
-	return 0;
-}
 
 
 #endif
